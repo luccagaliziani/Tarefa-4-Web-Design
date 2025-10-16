@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Faculdade Exemplo - Cursos de Graduação e Pós-Graduação</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="A Faculdade Exemplo oferece cursos de graduação e pós-graduação com excelência. Conheça nossa infraestrutura e corpo docente qualificado.">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        header, nav, main, footer {
+            padding: 20px;
+        }
+        header {
+            background: #004080;
+            color: white;
+        }
+        nav {
+            background: #0066cc;
+        }
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        .banner {
+            background: gray;
+            height: 200px;
+            text-align: center;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section {
+            margin: 20px 0;
+            background: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+        }
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Faculdade Exemplo</h1>
+    <p>Transformando conhecimento em futuro</p>
+</header>
+
+<nav>
+    <a href="index.html">Página Inicial</a>
+    <a href="cursos.html">Cursos de Graduação</a>
+    <a href="sobre.html">Sobre a Faculdade</a>
+    <a href="contato.html">Fale Conosco</a>
+</nav>
+
+<div class="banner">
+    <h2>Bem-vindo à nossa instituição de ensino superior</h2>
+</div>
+
+<main>
+    <section>
+        <h2>Quem Somos</h2>
+        <p>A Faculdade Exemplo é uma instituição de <strong>ensino superior</strong> fictícia, dedicada à formação de profissionais qualificados para os desafios do mercado. Oferecemos cursos de <strong>graduação</strong> e <strong>pós-graduação</strong>.</p>
+        <p>Nossa missão é oferecer uma <strong>educação de qualidade</strong>, com foco em inovação e desenvolvimento, transformando a vida de nossos alunos e contribuindo para a sociedade.</p>
+    </section>
+
+    <section>
+        <h2>Nossos Cursos</h2>
+        <ul>
+            <li><a href="cursos/administracao.html" title="Curso de Administração">Administração</a></li>
+            <li><a href="cursos/ciencia-da-computacao.html" title="Curso de Ciência da Computação">Ciência da Computação</a></li>
+            <li><a href="cursos/direito.html" title="Curso de Direito">Direito</a></li>
+            <li><a href="cursos/engenharia-civil.html" title="Curso de Engenharia Civil">Engenharia Civil</a></li>
+            <li><a href="cursos/medicina.html" title="Curso de Medicina">Medicina</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Infraestrutura</h2>
+        <img src="campus.jpg" alt="Foto do campus da Faculdade Exemplo com prédios modernos e áreas verdes.">
+        <p>Nosso campus conta com biblioteca, laboratórios modernos e áreas de convivência.</p>
+        <p>Estamos sempre investindo em tecnologia e inovação para o <strong>ensino superior</strong>.</p>
+    </section>
+
+    <section>
+        <h2>Corpo Docente</h2>
+        <p>Contamos com <strong>professores altamente qualificados</strong>, incluindo mestres e doutores com publicações em suas respectivas <strong>áreas de pesquisa</strong>.</p>
+        <p>O corpo docente é composto por profissionais com ampla experiência acadêmica e atuação destacada no mercado, especialistas em áreas como <strong>gestão, tecnologia, saúde e ciências humanas</strong>.</p>
+    </section>
+
+    <section>
+        <h2>Notícias Recentes</h2>
+        <article itemscope itemtype="http://schema.org/Article">
+            <h3 itemprop="headline">Semana Acadêmica 2025</h3>
+            <p itemprop="articleBody">A Faculdade Exemplo realizou sua tradicional Semana Acadêmica com palestras e workshops sobre as últimas tendências do mercado.</p>
+        </article>
+        <article itemscope itemtype="http://schema.org/Article">
+            <h3 itemprop="headline">Parceria Internacional</h3>
+            <p itemprop="articleBody">Firmamos acordo com universidades estrangeiras para intercâmbio de alunos, ampliando as oportunidades de formação global.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Depoimentos</h2>
+        <div itemscope itemtype="http://schema.org/Review">
+            <blockquote itemprop="reviewBody">
+                <p>"A Faculdade Exemplo mudou minha vida. Hoje atuo em uma grande empresa graças à formação recebida."</p>
+                <footer>- <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Ex-Aluno Satisfeito</span></span></footer>
+            </blockquote>
+            <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                <meta itemprop="ratingValue" content="5">
+                <meta itemprop="bestRating" content="5">
+            </div>
+        </div>
+        <div itemscope itemtype="http://schema.org/Review">
+            <blockquote itemprop="reviewBody">
+                <p>"Professores qualificados e ótima estrutura. Recomendo a todos."</p>
+                <footer>- <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Aluna do Curso de Direito</span></span></footer>
+            </blockquote>
+            <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                <meta itemprop="ratingValue" content="5">
+                <meta itemprop="bestRating" content="5">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Fale Conosco</h2>
+        <form action="obrigado.html" method="post">
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <textarea name="mensagem" rows="5" cols="30" aria-label="Mensagem"></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Faculdade Exemplo - Todos os direitos reservados</p>
+    <p>Endereço: Rua da Educação, 123 - Cidade Exemplo</p>
+    <p>Telefone: (00) 1234-5678</p>
+    <div class="footer-links">
+        <a href="mapa-do-site.html">Mapa do Site</a> |
+        <a href="politica-de-privacidade.html">Política de Privacidade</a> |
+        <a href="https://facebook.com" target="_blank">Facebook</a> |
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+    </div>
+</footer>
+
+</body>
+</html>

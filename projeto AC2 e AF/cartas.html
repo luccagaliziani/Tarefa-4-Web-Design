@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas Especiais - FIFA Fan Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root { --primary-color: #8b5cf6; --dark-bg: #0f172a; --dark-card: #1e293b; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--dark-bg); color: #cbd5e1; }
+        .menu-item { position: relative; padding-bottom: 4px; }
+        .menu-item::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--primary-color); transition: width 0.3s ease-in-out; }
+        .menu-item:hover::after, .menu-item.active::after { width: 100%; }
+        .menu-item.active { color: white; }
+        .promo-card {
+            background-color: var(--dark-card);
+            border: 1px solid #334155;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .promo-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(139, 92, 246, 0.4);
+        }
+        .promo-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, rgba(167, 139, 250, 0.2), transparent 30%);
+            animation: rotate 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .promo-card:hover::before {
+            opacity: 1;
+        }
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-700/50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-white tracking-wider">FIFA<span class="text-violet-400">FAN</span></a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="menu-item">Início</a>
+                <a href="historia.html" class="menu-item">História</a>
+                <a href="modos.html" class="menu-item">Modos de Jogo</a>
+                <a href="cartas.html" class="menu-item active">Cartas Especiais</a>
+                <a href="dicas.html" class="menu-item">Dicas</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                     <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800">
+            <a href="index.html" class="block py-3 px-6 text-sm hover:bg-slate-700/50">Início</a>
+            <a href="historia.html" class="block py-3 px-6 text-sm hover:bg-slate-700/50">História</a>
+            <a href="modos.html" class="block py-3 px-6 text-sm hover:bg-slate-700/50">Modos de Jogo</a>
+            <a href="cartas.html" class="block py-3 px-6 text-sm hover:bg-slate-700/50">Cartas Especiais</a>
+            <a href="dicas.html" class="block py-3 px-6 text-sm hover:bg-slate-700/50">Dicas</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl font-extrabold text-white mb-4">Galeria de Cartas Especiais</h1>
+            <p class="text-slate-400 max-w-3xl mx-auto">Dos cobiçados TOTYs aos futuros craques, explore o design e a temática das cartas mais desejadas do Ultimate Team.</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+            <div class="promo-card rounded-lg text-center p-4" data-aos="fade-up">
+                <img src="https://preview.redd.it/did-mbappe-deserved-toty-for-2024-v0-hxbayscog2be1.png?width=1080&crop=smart&auto=webp&s=58e4e38ac26da66015fd03d485cafdf6143adbda" class="mx-auto rounded-md" alt="Carta TOTY">
+                <h3 class="mt-4 font-bold text-lg text-blue-400">Team of the Year (TOTY)</h3>
+                <p class="text-sm text-slate-400">Os 11 melhores jogadores do mundo no ano anterior, com stats massivos.</p>
+            </div>
+            <div class="promo-card rounded-lg text-center p-4" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://media.contentapi.ea.com/content/dam/ea/fc/fc-25/common/tots/winner-reveals/ultimate/97/0-167792961.png.adapt.crop16x9.652w.png" class="mx-auto rounded-md" alt="Carta TOTS">
+                <h3 class="mt-4 font-bold text-lg text-amber-400">Team of the Season (TOTS)</h3>
+                <p class="text-sm text-slate-400">Celebra os jogadores com melhor desempenho nas principais ligas durante a temporada.</p>
+            </div>
+            <div class="promo-card rounded-lg text-center p-4" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://preview.redd.it/they-should-be-in-fc25-future-stars-promo-v0-lpmcy58za8od1.png?width=1080&crop=smart&auto=webp&s=dc43bff1e0689bf55b270a521271c45ff9e1cbcd" class="mx-auto rounded-md" alt="Carta Future Stars">
+                <h3 class="mt-4 font-bold text-lg text-pink-500">Future Stars</h3>
+                <p class="text-sm text-slate-400">Jovens promissores com upgrades que imaginam seu potencial no auge da carreira.</p>
+            </div>
+            <div class="promo-card rounded-lg text-center p-4" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://pbs.twimg.com/media/GV_wQfTWsAAKF_i?format=jpg&name=900x900" class="mx-auto rounded-md" alt="Carta Flashback">
+                <h3 class="mt-4 font-bold text-lg text-green-500">Flashback</h3>
+                <p class="text-sm text-slate-400">Relembra uma temporada específica de um jogador veterano com uma carta especial.</p>
+            </div>
+            <div class="promo-card rounded-lg text-center p-4" data-aos="fade-up">
+                <img src="https://preview.redd.it/fc-25-rulebreakers-concept-haaland-card-how-much-would-this-v0-rm0utz12wyod1.png?width=1080&crop=smart&auto=webp&s=7a9f40b70e2640e5054016996ef88c385d29593b" class="mx-auto rounded-md" alt="Carta Rulebreakers">
+                <h3 class="mt-4 font-bold text-lg text-orange-500">Rulebreakers</h3>
+                <p class="text-sm text-slate-400">Jogadores com estatísticas alteradas radicalmente, mudando seu estilo de jogo.</p>
+            </div>
+            <div class="promo-card rounded-lg text-center p-4" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://preview.redd.it/winter-wildcards-fc-25-gimme-your-thoughts-remade-payet-for-v0-5fhbw4w8irod1.png?width=1080&crop=smart&auto=webp&s=3e0f1cf0fd96f217a316ed9f5fdbdc9ffd8144ae" alt="Carta Winter Wildcards">
+                <h3 class="mt-4 font-bold text-lg text-violet-500">Winter Wildcards</h3>
+                <p class="text-sm text-slate-400">Evento de inverno com boosts, trocas de posição e de perna ruim/fintas.</p>
+            </div>
+             <div class="promo-card rounded-lg text-center p-4" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://game-assets.fut.gg/2025/futgg-player-item-card/25-100920086.c4e169cd47860194ef29f4a3f93a4d41b1f2e894774e2b22a070a599785b328d.webp" class="mx-auto rounded-md" alt="Carta FUT Birthday">
+                <h3 class="mt-4 font-bold text-lg text-red-500">FUT Birthday</h3>
+                <p class="text-sm text-slate-400">Comemora o aniversário do Ultimate Team com upgrades de 5 estrelas.</p>
+            </div>
+             <div class="promo-card rounded-lg text-center p-4" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://preview.redd.it/shapeshifters-fc-25-v0-szs371je65qd1.jpg?width=1080&crop=smart&auto=webp&s=17ce421a8143cf7927d2373b825ae3e9148267e6" class="mx-auto rounded-md" alt="Carta Shapeshifters">
+                <h3 class="mt-4 font-bold text-lg text-cyan-500">Shapeshifters</h3>
+                <p class="text-sm text-slate-400">Jogadores em posições totalmente novas, transformando até goleiros em atacantes.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-800 border-t border-slate-700 py-8 mt-16">
+        <div class="container mx-auto px-6 text-center text-slate-400">
+            <p class="text-sm">&copy; 2025 FIFA Fan Page.</p>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 600, once: true });
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open-icon');
+        const menuCloseIcon = document.getElementById('menu-close-icon');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

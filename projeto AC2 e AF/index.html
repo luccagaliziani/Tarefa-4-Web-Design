@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA Fan Page - O Universo do Futebol Virtual</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display-swap" rel="stylesheet">
+    
+    <!-- Animate on Scroll (AOS) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="description" content="Sua central de informações sobre a franquia FIFA (EA Sports FC). Notícias, modos de jogo, história e dicas.">
+</head>
+<body class="antialiased">
+
+    <!-- Cabeçalho e Menu de Navegação -->
+    <header class="bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-700/50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-black text-white tracking-wider">FIFA<span class="text-violet-400">FAN</span></a>
+            
+            <!-- Menu Desktop -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="menu-item active">Início</a>
+                <a href="historia.html" class="menu-item">História</a>
+                <a href="modos.html" class="menu-item">Modos de Jogo</a>
+                <a href="cartas.html" class="menu-item">Cartas Especiais</a>
+                <a href="dicas.html" class="menu-item">Dicas</a>
+            </div>
+
+            <!-- Botão do Menu Mobile -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none" aria-label="Abrir menu">
+                     <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menu Mobile (Dropdown) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800">
+            <a href="index.html" class="block py-3 px-6 text-sm hover:bg-slate-700/50">Início</a>
+            <a href="historia.html" class="block py-3 px-6 text-sm hover:bg-slate-700/50">História</a>
+            <a href="modos.html" class="block py-3 px-6 text-sm hover:bg-slate-700/50">Modos de Jogo</a>
+            <a href="cartas.html" class="block py-3 px-6 text-sm hover:bg-slate-700/50">Cartas Especiais</a>
+            <a href="dicas.html" class="block py-3 px-6 text-sm hover:bg-slate-700/50">Dicas</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Hero -->
+        <section class="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
+            <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+                <source src="https://placehold.co/1920x1080.mp4?text=Video+Gameplay" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="relative z-20 px-4" data-aos="fade-in">
+                <h1 class="text-4xl md:text-6xl font-black text-white uppercase tracking-wider mb-4">Bem-vindo ao <span class="text-violet-400">FifaFan</span></h1>
+                <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">Tudo sobre o maior jogo de futebol do mundo. Notícias, guias e a história da franquia em um só lugar.</p>
+            </div>
+        </section>
+
+        <!-- Seção O Jogo do Mundo (Capa) -->
+        <section class="py-20 bg-slate-800">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <!-- Imagem da Capa -->
+                    <div class="md:w-1/2" data-aos="fade-right">
+                        <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/07/Capa-completa-EA-Sports-FC-26.jpg?w=849&h=477&crop=0" class="rounded-lg shadow-2xl w-full" alt="Capa de uma edição do FIFA">
+                    </div>
+                    <!-- Texto Descritivo -->
+                    <div class="md:w-1/2 text-center md:text-left" data-aos="fade-left" data-aos-delay="100">
+                        <h2 class="text-3xl font-bold text-white mb-4">O Jogo de Todo Mundo</h2>
+                        <p class="text-slate-400 mb-6">
+                            EA SPORTS FC™ 24 te aproxima do futebol mais do que nunca, com tecnologias de ponta que proporcionam um realismo incomparável em todas as partidas. Jogue com seus clubes e jogadores favoritos, monte seu time dos sonhos no Ultimate Team e viva a experiência autêntica do esporte mais popular do planeta.
+                        </p>
+                        <a href="historia.html" class="inline-block bg-violet-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-violet-700 transition-colors">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Explore os Modos -->
+        <section id="features" class="py-20 bg-dark-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-white mb-12" data-aos="fade-up">Explore o Universo do Jogo</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card-hover-effect rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://i.pinimg.com/736x/72/cf/fa/72cffa8db25fb6e91e67326b1d655294.jpg" class="mx-auto mb-4 rounded-full w-24 h-24 object-cover" alt="Ícone Ultimate Team">
+
+                        <h3 class="text-xl font-bold text-white mb-2">Ultimate Team</h3>
+                        <p class="text-sm">Monte o time dos seus sonhos e compita no modo mais popular.</p>
+                    </div>
+                    <div class="card-hover-effect rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://preview.redd.it/fifa-ea-fc-career-mode-conspiracy-v0-buutttpnuwkf1.jpeg?width=640&crop=smart&auto=webp&s=c13eeb43c7cdc33969924ab619f8f15b5270f2b9" class="mx-auto mb-4 rounded-full w-24 h-24 object-cover" alt="Ícone Modo Carreira">
+                        <h3 class="text-xl font-bold text-white mb-2">Modo Carreira</h3>
+                        <p class="text-sm">Leve seu clube à glória ou crie sua própria lenda.</p>
+                    </div>
+                    <div class="card-hover-effect rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Pro_clubs.png" class="mx-auto mb-4 rounded-full w-24 h-24 object-cover" alt="Ícone Pro Clubs">
+                        <h3 class="text-xl font-bold text-white mb-2">Pro Clubs</h3>
+                        <p class="text-sm">Junte-se a amigos e compita em partidas 11 contra 11.</p>
+                    </div>
+                    <div class="card-hover-effect rounded-lg p-6 text-center" data-aos="fade-up" data-aos-delay="400">
+                        <img src="https://images.seeklogo.com/logo-png/38/1/volta-football-logo-png_seeklogo-389119.png" class="mx-auto mb-4 rounded-full w-24 h-24 object-cover" alt="Ícone VOLTA">
+
+                        <h3 class="text-xl font-bold text-white mb-2">VOLTA Football</h3>
+                        <p class="text-sm">Leve o futebol de volta às ruas com dribles e estilo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Últimas Notícias -->
+        <section class="py-20 bg-dark-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center text-white mb-12" data-aos="fade-up">Últimas Notícias</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Notícia 1 -->
+                    <div class="bg-dark-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/01/FC24_TOTY_Winner_Motif_16x9-1.png?w=1200&h=900&crop=0" class="w-full h-48 object-cover" alt="Imagem da notícia sobre TOTY">
+                        <div class="p-6">
+                            <span class="text-xs text-violet-400 font-semibold">EVENTOS</span>
+                            <h3 class="text-lg font-bold text-white mt-2 mb-2">Equipe do Ano (TOTY) é anunciada com grandes estrelas</h3>
+                            <p class="text-sm text-slate-400">Confira a lista completa dos jogadores selecionados para a prestigiada Equipe do Ano e prepare-se para encontrá-los em packs.</p>
+                        </div>
+                    </div>
+                    <!-- Notícia 2 -->
+                    <div class="bg-dark-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://pbs.twimg.com/media/G0qBa9LWsAAwAW8?format=png&name=900x900" class="w-full h-48 object-cover" alt="Imagem da notícia sobre atualização">
+                        <div class="p-6">
+                            <span class="text-xs text-violet-400 font-semibold">ATUALIZAÇÕES</span>
+                            <h3 class="text-lg font-bold text-white mt-2 mb-2">Nova atualização de jogabilidade traz melhorias na defesa</h3>
+                            <p class="text-sm text-slate-400">A mais recente atualização foca em ajustar o comportamento da IA defensiva e a eficácia dos carrinhos, prometendo um jogo mais equilibrado.</p>
+                        </div>
+                    </div>
+                    <!-- Notícia 3 -->
+                    <div class="bg-dark-card rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                        <img src="https://egamersworld.com/cdn-cgi/image/width=690,quality=75,format=webp/uploads/blog/1/17/1718277337402_1718277337402.webp" class="w-full h-48 object-cover" alt="Imagem da notícia sobre eSports">
+                        <div class="p-6">
+                            <span class="text-xs text-violet-400 font-semibold">ESPORTS</span>
+                            <h3 class="text-lg font-bold text-white mt-2 mb-2">Campeonato mundial de FC Pro tem datas e premiação reveladas</h3>
+                            <p class="text-sm text-slate-400">A temporada competitiva atinge seu auge! Saiba quando e onde os melhores jogadores do mundo competirão pela glória e por milhões em prêmios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Trilha Sonora -->
+        <section class="py-20 bg-slate-800">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold text-white mb-4" data-aos="fade-up">Trilha Sonora Oficial</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+                    Curta as músicas que embalam seus menus e partidas. A trilha sonora do EA FC 24 já está disponível!
+                </p>
+                <div class="flex justify-center" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://open.spotify.com/playlist/37i9dQZF1DX4vgOVqe6BJn?si=f0de7fca089b40c9" style="border-radius:12px" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                        <img src="https://newsroom.spotify.com/wp-content/themes/ftr/assets/images/spotify-logo.png" height="300"alt="Thumbnail do Spotify" >
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção FAQ -->
+        <section class="py-20 bg-dark-bg">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl font-bold text-center text-white mb-12" data-aos="fade-up">Perguntas Frequentes (FAQ)</h2>
+                <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Pergunta 1 -->
+                    <div class="bg-dark-card rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold text-white">O que é o Ultimate Team?</span>
+                            <svg class="faq-arrow w-6 h-6 text-violet-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6">
+                            <p class="text-slate-400">Ultimate Team é um modo de jogo onde você monta seu próprio time usando cartas de jogadores, que podem ser adquiridas em pacotes ou no mercado de transferências. Você compete em diversos torneios e divisões online e offline para ganhar recompensas e melhorar seu elenco.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 2 -->
+                    <div class="bg-dark-card rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold text-white">Como funcionam as Cartas Especiais?</span>
+                            <svg class="faq-arrow w-6 h-6 text-violet-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6">
+                            <p class="text-slate-400">Cartas Especiais são versões melhoradas de jogadores, lançadas durante eventos promocionais como a Equipe da Semana (TOTW), Equipe do Ano (TOTY) ou Future Stars. Elas possuem atributos superiores às suas cartas base e geralmente têm um design único.</p>
+                        </div>
+                    </div>
+                    <!-- Pergunta 3 -->
+                    <div class="bg-dark-card rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold text-white">Posso jogar com amigos em diferentes plataformas?</span>
+                            <svg class="faq-arrow w-6 h-6 text-violet-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden px-6 pb-6">
+                            <p class="text-slate-400">Sim, o EA Sports FC possui cross-play. Jogadores de PlayStation 5, Xbox Series X|S e PC podem jogar juntos na mesma geração. Da mesma forma, jogadores de PlayStation 4 e Xbox One podem jogar entre si. O Pro Clubs também suporta cross-play dentro dessas mesmas gerações.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-slate-900 border-t border-slate-700/50">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+                <div class="text-center md:text-left">
+                    <a href="index.html" class="text-xl font-black text-white tracking-wider">FIFA<span class="text-violet-400">FAN</span></a>
+                    <p class="text-sm text-slate-400 mt-2">Seu guia completo para o universo do futebol virtual.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://x.com/easportsfc" class="text-slate-400 hover:text-violet-400 transition-colors" aria-label="Twitter"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085a4.93 4.93 0 004.6 3.42 9.86 9.86 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg></a>
+                    <a href="https://www.instagram.com/easportsfc/" class="text-slate-400 hover:text-violet-400 transition-colors" aria-label="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.07 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.88 1.44 1.44 0 000-2.88z"/></svg></a>
+                    <a href="https://www.facebook.com/easports/" class="text-slate-400 hover:text-violet-400 transition-colors" aria-label="Facebook"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.409 0 22.675 0z"/></svg></a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-slate-700/50 pt-8 text-center text-sm text-slate-500">
+                <p>&copy; 2025 FIFA Fan Page. Todos os direitos reservados.</p>
+                <p class="mt-1">Este é um site de fã, não afiliado à Electronic Arts Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inicializa a biblioteca de animações
+        AOS.init({ duration: 800, once: true });
+
+        // Lógica para o menu mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpenIcon = document.getElementById('menu-open-icon');
+        const menuCloseIcon = document.getElementById('menu-close-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuOpenIcon.classList.toggle('hidden');
+            menuCloseIcon.classList.toggle('hidden');
+        });
+
+        // Lógica para o FAQ (Accordion)
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const arrow = question.querySelector('.faq-arrow');
+                
+                // Fecha outras respostas abertas
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    if (ans !== answer && !ans.classList.contains('hidden')) {
+                        ans.classList.add('hidden');
+                        ans.previousElementSibling.querySelector('.faq-arrow').classList.remove('rotate-180');
+                    }
+                });
+
+                // Abre ou fecha a resposta clicada
+                answer.classList.toggle('hidden');
+                arrow.classList.toggle('rotate-180');
+            });
+        });
+
+    </script>
+</body>
+</html>
